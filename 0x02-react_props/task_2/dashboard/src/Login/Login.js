@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react"
+import "./Login.css"
 
 function Login() {
-    return (
-        <div className="App-body">
+    return(
+      <>
         <p>Login to access the full dashboard</p>
         <form>
           <label htmlFor="email">Email:</label>
@@ -11,6 +12,8 @@ function Login() {
           <input type="password" name="password"></input>
           <button>OK</button>
         </form>
-      </div>
+      </>
     )
 }
+
+export default Login

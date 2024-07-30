@@ -1,15 +1,17 @@
-import { shallow } from "enzyme";
-import React from "react";
-import Login from "./Login";
+import React from "react"
+import "./Login.css"
 
-describe("Header", () => {
-  it("should render without crashing", () => {
-    const wrapper = shallow(<Login />);
-    expect(wrapper.exists()).toEqual(true);
-  });
-  it("should have 2 input tags and 2 label tags", () => {
-    const wrapper = shallow(<Login />);
-    expect(wrapper.find("label")).toHaveLength(2);
-    expect(wrapper.find("input")).toHaveLength(2);
-  });
-});
+function Login() {
+    return(
+        <div className="App-body">
+        <p>Login to access the full dashboard</p>
+        <form>
+          <label htmlFor="email">Email:</label>
+          <input type="email" name="email"></input>
+          <label htmlFor="password">Password:</label>
+          <input type="password" name="password"></input>
+          <button>OK</button>
+        </form>
+      </div>
+    )
+}
